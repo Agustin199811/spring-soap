@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:soapui-project id="9ec8f3c4-5c54-4952-a379-509f7cb1d449" activeEnvironment="Default" name="demosoap" resourceRoot="" soapui-version="5.7.2" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
     <con:settings/>
-    <con:interface xsi:type="con:WsdlInterface" id="2884f730-fac1-4a03-bed8-2d69fb8d3ffc" wsaVersion="NONE" name="productPortSoap11" type="wsdl" bindingName="{http://www.uce.com/products/gen}productPortSoap11" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/ws/products.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:interface xsi:type="con:WsdlInterface" id="2884f730-fac1-4a03-bed8-2d69fb8d3ffc" wsaVersion="NONE" name="productPortSoap11" type="wsdl" bindingName="{http://www.uce.com/products/gen}productPortSoap11" soapVersion="1_1" anonymous="optional" definition="https://spring-soap.onrender.com/ws/products.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <con:settings/>
-        <con:definitionCache type="TEXT" rootPart="http://localhost:8080/ws/products.wsdl">
+        <con:definitionCache type="TEXT" rootPart="https://spring-soap.onrender.com/ws/products.wsdl">
             <con:part>
-                <con:url>http://localhost:8080/ws/products.wsdl</con:url>
+                <con:url>https://spring-soap.onrender.com/ws/products.wsdl</con:url>
                 <con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.uce.com/products/gen" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://www.uce.com/products/gen" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.uce.com/products/gen">
   <wsdl:types>
     <xs:schema elementFormDefault="qualified" targetNamespace="http://www.uce.com/products/gen" xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -126,7 +126,7 @@
   </wsdl:binding>
   <wsdl:service name="productPortService">
     <wsdl:port binding="tns:productPortSoap11" name="productPortSoap11">
-      <soap:address location="http://localhost:8080/ws"/>
+      <soap:address location="https://spring-soap.onrender.com/ws"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>]]></con:content>
@@ -134,7 +134,7 @@
             </con:part>
         </con:definitionCache>
         <con:endpoints>
-            <con:endpoint>http://localhost:8080/ws</con:endpoint>
+            <con:endpoint>https://spring-soap.onrender.com/ws</con:endpoint>
         </con:endpoints>
         <con:operation id="eb102b71-d03c-4898-b203-a3627867e5b5" isOneWay="false" action="" name="getProduct" bindingOperationName="getProduct" type="Request-Response" outputName="getProductResponse" inputName="getProductRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
             <con:settings/>
@@ -144,7 +144,7 @@
                         &lt;xml-fragment/></con:setting>
                 </con:settings>
                 <con:encoding>UTF-8</con:encoding>
-                <con:endpoint>http://localhost:8080/ws</con:endpoint>
+                <con:endpoint>https://spring-soap.onrender.com/ws</con:endpoint>
                 <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.uce.com/products/gen">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -169,7 +169,7 @@
                     <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
                 </con:settings>
                 <con:encoding>UTF-8</con:encoding>
-                <con:endpoint>http://localhost:8080/ws</con:endpoint>
+                <con:endpoint>https://spring-soap.onrender.com/ws</con:endpoint>
                 <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.uce.com/products/gen">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -192,16 +192,16 @@
                     <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
                 </con:settings>
                 <con:encoding>UTF-8</con:encoding>
-                <con:endpoint>http://localhost:8080/ws</con:endpoint>
+                <con:endpoint>https://spring-soap.onrender.com/ws</con:endpoint>
                 <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gen="http://www.uce.com/products/gen">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <gen:postProductRequest>\r
          <gen:product>\r
             <gen:id>0</gen:id>\r
-            <gen:name>Azúcar Paramonga</gen:name>\r
-            <gen:price>18.50</gen:price>\r
-            <gen:description>Bolsa 4kg</gen:description>\r
+            <gen:name>Leche</gen:name>\r
+            <gen:price>0.95</gen:price>\r
+            <gen:description>Leche Vita</gen:description>\r
          </gen:product>\r
       </gen:postProductRequest>\r
    </soapenv:Body>\r

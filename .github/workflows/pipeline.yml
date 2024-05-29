@@ -1,0 +1,26 @@
+name: Deploy Service SOAP with Spring Boot
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Wait for 3 minutos before deploying
+        if: ${{ github.event_name == 'push' }}
+        run: sleep 220
+      - name: Deploy with Render
+        if: ${{ github.event_name == 'push' }}
+        uses: sws2apps/render-deployment@main
+        with:
+          serviceId: ${{ secrets.RENDER_SERVICE_ID }}
+          apiKey: ${{ secrets.API_KEY_RENDER }}
+          multipleDeployment: false
