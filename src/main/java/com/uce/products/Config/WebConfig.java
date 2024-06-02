@@ -9,7 +9,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**") // Permite CORS específicamente en el endpoint GraphQL
+        registry.addMapping("/ws/**") // Permite CORS específicamente en el endpoint GraphQL
                 .allowedOrigins("http://localhost:3000") // Permitir solicitudes desde este origen
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Permitir los métodos HTTP
                 .allowedHeaders("*"); // Permitir todos los encabezados
